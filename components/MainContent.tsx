@@ -16,7 +16,9 @@ const MainContent = () => {
       prompt: `Q: ${prompt}\nA:`,
       temperature: 0,
       max_tokens: 100,
-      stop: ['\n'],
+      top_p: 1,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
     });
     console.log(response);
     setOutput(response.data.choices[0].text);
